@@ -10,7 +10,7 @@ const app = express();
 app.use(express.static('public'));
 console.log(secretKey)
 
-const YOUR_DOMAIN = 'http://localhost:4242';
+let YOUR_DOMAIN = 'http://localhost:4242';
 
 app.post('/create-checkout-session', async (req, res) => {
   const session = await stripe.checkout.sessions.create({
@@ -22,7 +22,7 @@ app.post('/create-checkout-session', async (req, res) => {
       },
     ],
     mode: 'payment',
-    success_url: `${YOUR_DOMAIN}?success=true`,
+    success_url: `${YOUR_DOMAIN}?/success`,
     cancel_url: `${YOUR_DOMAIN}?canceled=true`,
     automatic_tax: { enabled: true },
   });
