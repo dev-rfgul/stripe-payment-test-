@@ -6,7 +6,7 @@
     "16": "^0.0.2",
     "@stripe/react-stripe-js": "^1.0.0",
     "@stripe/stripe-js": "^1.0.0",
-    "dotenv": "^16.4.5",
+    "dotenv": "^16.4.7",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-scripts": "^3.4.0",
